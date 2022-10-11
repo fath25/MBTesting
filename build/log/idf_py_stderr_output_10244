@@ -1,0 +1,40 @@
+CMake Error at /Users/fath25/esp/esp-idf/tools/cmake/build.cmake:519 (message):
+  Traceback (most recent call last):
+
+    File "/opt/homebrew/Cellar/python@3.10/3.10.6_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+      return _run_code(code, main_globals, None,
+    File "/opt/homebrew/Cellar/python@3.10/3.10.6_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+      exec(code, run_globals)
+    File "/Users/fath25/.espressif/python_env/idf5.0_py3.10_env/lib/python3.10/site-packages/idf_component_manager/prepare_components/__main__.py", line 3, in <module>
+      main()
+    File "/Users/fath25/.espressif/python_env/idf5.0_py3.10_env/lib/python3.10/site-packages/idf_component_manager/prepare_components/prepare.py", line 126, in main
+      args.func(args)
+    File "/Users/fath25/.espressif/python_env/idf5.0_py3.10_env/lib/python3.10/site-packages/idf_component_manager/prepare_components/prepare.py", line 39, in prepare_dep_dirs
+      ComponentManager(args.project_dir).prepare_dep_dirs(
+    File "/Users/fath25/.espressif/python_env/idf5.0_py3.10_env/lib/python3.10/site-packages/idf_component_manager/core.py", line 404, in prepare_dep_dirs
+      downloaded_component_paths = download_project_dependencies(
+    File "/Users/fath25/.espressif/python_env/idf5.0_py3.10_env/lib/python3.10/site-packages/idf_component_manager/dependencies.py", line 99, in download_project_dependencies
+      solution = solver.solve()
+    File "/Users/fath25/.espressif/python_env/idf5.0_py3.10_env/lib/python3.10/site-packages/idf_component_manager/version_solver/version_solver.py", line 29, in solve
+      self.solve_manifest(manifest)
+    File "/Users/fath25/.espressif/python_env/idf5.0_py3.10_env/lib/python3.10/site-packages/idf_component_manager/version_solver/version_solver.py", line 48, in solve_manifest
+      self.solve_component(requirement)
+    File "/Users/fath25/.espressif/python_env/idf5.0_py3.10_env/lib/python3.10/site-packages/idf_component_manager/version_solver/version_solver.py", line 51, in solve_component
+      cmp_with_versions = requirement.source.versions(
+    File "/Users/fath25/.espressif/python_env/idf5.0_py3.10_env/lib/python3.10/site-packages/idf_component_tools/sources/web_service.py", line 95, in versions
+      cmp_with_versions = self.api_client.versions(name, spec, target)
+    File "/Users/fath25/.espressif/python_env/idf5.0_py3.10_env/lib/python3.10/site-packages/idf_component_tools/api_client.py", line 196, in versions
+      body = self._base_request(
+    File "/Users/fath25/.espressif/python_env/idf5.0_py3.10_env/lib/python3.10/site-packages/idf_component_tools/api_client.py", line 169, in _base_request
+      handle_4xx_error(response)
+    File "/Users/fath25/.espressif/python_env/idf5.0_py3.10_env/lib/python3.10/site-packages/idf_component_tools/api_client.py", line 67, in handle_4xx_error
+      raise exception('\n'.join(messages))
+
+  idf_component_tools.api_client_errors.NamespaceNotFound: Namespace
+  "espresssif" not found
+
+Call Stack (most recent call first):
+  /Users/fath25/esp/esp-idf/tools/cmake/project.cmake:440 (idf_build_process)
+  CMakeLists.txt:8 (project)
+
+
